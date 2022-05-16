@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      caption {
+        margin: 10px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      table,th,td {
+        border: 2px solid black;
+        width: 1200px;
+        margin: 0 auto;
+      }
+      th,td{
+        padding: 15px;
+        text-align: center;
+      }
+
+      #table2 {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 1050px;
+        height: 300px;
+        padding: 5px;
+        margin: 0 auto;
+      }
+
+      #table3 {
+        border: 2px solid black;
+        background-color: pink;
+        margin: 10px;
+        width: 750px;
+        height: 250px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>Nested Table</caption>
+
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colspan="2">Colspan Column</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Rowspan Cell</td>
+          <td>Cell 2</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: yellow">
+            <!-- table nesting start -->
+            <table id="table2">
+              <!-- table2 1st row -->
+              <tr>
+                <th>Inner Column Heading 1</th>
+                <th>Inner Column Heading 2</th>
+              </tr>
+              <!-- table2 2nd row -->
+              <tr>
+                <td style="background-color: lightblue;">Inner Data Cell 1</td>
+                <td style="background-color: lawngreen">
+                  <!-- table nesting start -->
+                  <table id="table3">
+                    <!-- table3 1st row -->
+                    <tr>
+                      <th>Most Inner Column Heading 1</th>
+                      <th>Most Inner Column Heading 2</th>
+                    </tr>
+                    <!-- table3 2nd row -->
+                    <tr>
+                      <td style="background-color: lightsalmon">Innermost Data cell 1</td>
+                      <td style="background-color: coral">Innermost Data cell 2</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
